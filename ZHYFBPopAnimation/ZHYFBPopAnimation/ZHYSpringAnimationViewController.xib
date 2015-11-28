@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZHYSpringAnimationViewController">
+            <connections>
+                <outlet property="BouncinessSlider" destination="7m1-Ls-DJX" id="liB-QI-CDH"/>
+                <outlet property="FrictionSlider" destination="noa-kG-q33" id="7Vo-ZR-ekN"/>
+                <outlet property="FrictionSwitch" destination="JcN-vR-Axn" id="CqQ-yJ-oNi"/>
+                <outlet property="MassSlider" destination="xIi-Cv-HXH" id="ErR-mI-tSp"/>
+                <outlet property="MassSwitch" destination="70f-Cm-JE7" id="WJr-Bi-fGc"/>
+                <outlet property="SpeedSlider" destination="vFz-pJ-aLs" id="XRh-vr-zmI"/>
+                <outlet property="TensionSlider" destination="CZ0-50-drV" id="9J8-QT-o1i"/>
+                <outlet property="TensionSwitch" destination="LPC-Um-IJW" id="myG-bh-gKN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bounciness 弹簧弹力 取值范围为[0, 20]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1g3-bb-pXT">
+                    <rect key="frame" x="25" y="224" width="270" height="18"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="LqU-lL-GNc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed 弹簧速度，速度越快，动画时间越短 [0, 20]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wl1-72-O4o">
+                    <rect key="frame" x="25" y="288" width="270" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="2ft-R6-5wn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="vFz-pJ-aLs" userLabel="Speed Slider">
+                    <rect key="frame" x="23" y="309" width="274" height="31"/>
+                    <connections>
+                        <action selector="sliderChange:" destination="-1" eventType="valueChanged" id="Uel-IE-jzQ"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tension 弹簧的张力" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NmF-jc-0qh">
+                    <rect key="frame" x="25" y="374" width="270" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="gg8-5L-Mpv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friction 弹簧摩擦" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46L-mc-6XQ">
+                    <rect key="frame" x="25" y="430" width="270" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="Sd8-l5-aS5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mass 质量" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSM-3H-3DB">
+                    <rect key="frame" x="25" y="480" width="106" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="1p5-KM-k2O"/>
+                        <constraint firstAttribute="width" constant="106" id="km5-Un-7pj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JcN-vR-Axn" userLabel="Friction Switch">
+                    <rect key="frame" x="25" y="445" width="51" height="31"/>
+                    <connections>
+                        <action selector="sliderChange:" destination="-1" eventType="valueChanged" id="3iB-Zd-ZJh"/>
+                    </connections>
+                </switch>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LPC-Um-IJW" userLabel="Tension Switch">
+                    <rect key="frame" x="25" y="391" width="51" height="31"/>
+                    <connections>
+                        <action selector="sliderChange:" destination="-1" eventType="valueChanged" id="nJM-Be-x3f"/>
+                    </connections>
+                </switch>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="70f-Cm-JE7" userLabel="Mass Switch">
+                    <rect key="frame" x="25" y="500" width="51" height="31"/>
+                    <connections>
+                        <action selector="sliderChange:" destination="-1" eventType="valueChanged" id="BNk-4H-qvW"/>
+                    </connections>
+                </switch>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="250" minValue="0.0" maxValue="500" translatesAutoresizingMaskIntoConstraints="NO" id="CZ0-50-drV" userLabel="Tension Slider">
+                    <rect key="frame" x="87" y="392" width="210" height="31"/>
+                    <connections>
+                        <action selector="sliderChange:" destination="-1" eventType="valueChanged" id="PfP-tg-Nej"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="xIi-Cv-HXH" userLabel="Mass Slider">
+                    <rect key="frame" x="87" y="500" width="210" height="31"/>
+                    <connections>
+                        <action selector="sliderChange:" destination="-1" eventType="valueChanged" id="bic-gH-2oI"/>
+                    </connections>
+                </slider>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="noa-kG-q33" userLabel="Friction Slider">
+                    <rect key="frame" x="87" y="446" width="210" height="31"/>
+                    <connections>
+                        <action selector="sliderChange:" destination="-1" eventType="valueChanged" id="mnt-wH-kVv"/>
+                    </connections>
+                </slider>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bounciness和Speed一起决定着弹簧动画的效果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Gh-Zd-F4l">
+                    <rect key="frame" x="25" y="347" width="270" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="ZoV-Qf-KcK"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="张力，摩擦，质量这三者可以从更细的粒度上替代Bounciness和Speed控制弹簧动画的效果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUb-TV-Hee">
+                    <rect key="frame" x="25" y="539" width="270" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="JII-7j-Civ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="6"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="7m1-Ls-DJX" userLabel="Bounciness Slider">
+                    <rect key="frame" x="23" y="250" width="274" height="31"/>
+                    <connections>
+                        <action selector="sliderChange:" destination="-1" eventType="valueChanged" id="eTK-km-RrC"/>
+                    </connections>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="noa-kG-q33" firstAttribute="trailing" secondItem="xIi-Cv-HXH" secondAttribute="trailing" id="0yb-sR-Rwq"/>
+                <constraint firstItem="Wl1-72-O4o" firstAttribute="trailing" secondItem="vFz-pJ-aLs" secondAttribute="trailing" id="1Eb-wm-osv"/>
+                <constraint firstItem="7m1-Ls-DJX" firstAttribute="trailing" secondItem="Wl1-72-O4o" secondAttribute="trailing" id="3NI-nt-pcb"/>
+                <constraint firstItem="JcN-vR-Axn" firstAttribute="top" secondItem="46L-mc-6XQ" secondAttribute="bottom" constant="1" id="46A-c3-d99"/>
+                <constraint firstItem="8Gh-Zd-F4l" firstAttribute="top" secondItem="vFz-pJ-aLs" secondAttribute="bottom" constant="8" symbolic="YES" id="5do-s3-WDz"/>
+                <constraint firstItem="LPC-Um-IJW" firstAttribute="top" secondItem="NmF-jc-0qh" secondAttribute="bottom" constant="3" id="6Hg-Oe-uZ5"/>
+                <constraint firstItem="NmF-jc-0qh" firstAttribute="top" secondItem="8Gh-Zd-F4l" secondAttribute="bottom" constant="8" symbolic="YES" id="7GY-64-Lxo"/>
+                <constraint firstItem="8Gh-Zd-F4l" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8OK-zd-Xpi"/>
+                <constraint firstItem="46L-mc-6XQ" firstAttribute="top" secondItem="CZ0-50-drV" secondAttribute="bottom" constant="8" symbolic="YES" id="8eH-7S-L1K"/>
+                <constraint firstItem="8Gh-Zd-F4l" firstAttribute="trailing" secondItem="vFz-pJ-aLs" secondAttribute="trailing" id="9sd-0k-WVW"/>
+                <constraint firstItem="70f-Cm-JE7" firstAttribute="top" secondItem="BSM-3H-3DB" secondAttribute="bottom" constant="4" id="C9t-dd-cLl"/>
+                <constraint firstItem="xIi-Cv-HXH" firstAttribute="trailing" secondItem="hUb-TV-Hee" secondAttribute="trailing" id="DD0-jT-th3"/>
+                <constraint firstItem="LPC-Um-IJW" firstAttribute="leading" secondItem="NmF-jc-0qh" secondAttribute="leading" id="E5k-6w-EdI"/>
+                <constraint firstItem="8Gh-Zd-F4l" firstAttribute="leading" secondItem="vFz-pJ-aLs" secondAttribute="leading" id="H8f-J9-Nsm"/>
+                <constraint firstItem="8Gh-Zd-F4l" firstAttribute="leading" secondItem="NmF-jc-0qh" secondAttribute="leading" id="IAN-fp-4xb"/>
+                <constraint firstItem="xIi-Cv-HXH" firstAttribute="leading" secondItem="noa-kG-q33" secondAttribute="leading" id="K8X-y2-naN"/>
+                <constraint firstItem="46L-mc-6XQ" firstAttribute="leading" secondItem="JcN-vR-Axn" secondAttribute="leading" id="Lf6-9p-cQo"/>
+                <constraint firstItem="vFz-pJ-aLs" firstAttribute="top" secondItem="Wl1-72-O4o" secondAttribute="bottom" id="MUH-tI-QKK"/>
+                <constraint firstItem="CZ0-50-drV" firstAttribute="trailing" secondItem="NmF-jc-0qh" secondAttribute="trailing" id="Pko-T8-tij"/>
+                <constraint firstItem="46L-mc-6XQ" firstAttribute="leading" secondItem="LPC-Um-IJW" secondAttribute="leading" id="Q8V-1Q-Y6y"/>
+                <constraint firstItem="1g3-bb-pXT" firstAttribute="leading" secondItem="7m1-Ls-DJX" secondAttribute="leading" id="Rgp-E0-VY4"/>
+                <constraint firstItem="1g3-bb-pXT" firstAttribute="trailing" secondItem="7m1-Ls-DJX" secondAttribute="trailing" id="SBj-xB-fLv"/>
+                <constraint firstItem="JcN-vR-Axn" firstAttribute="leading" secondItem="BSM-3H-3DB" secondAttribute="leading" id="TOw-DB-gWS"/>
+                <constraint firstItem="xIi-Cv-HXH" firstAttribute="top" secondItem="70f-Cm-JE7" secondAttribute="top" id="Twt-VO-3dc"/>
+                <constraint firstItem="Wl1-72-O4o" firstAttribute="leading" secondItem="7m1-Ls-DJX" secondAttribute="leading" id="URd-3Y-DuN"/>
+                <constraint firstItem="70f-Cm-JE7" firstAttribute="leading" secondItem="BSM-3H-3DB" secondAttribute="leading" id="VG2-Qn-9la"/>
+                <constraint firstItem="noa-kG-q33" firstAttribute="trailing" secondItem="46L-mc-6XQ" secondAttribute="trailing" id="WIz-Jk-EF5"/>
+                <constraint firstItem="7m1-Ls-DJX" firstAttribute="top" secondItem="1g3-bb-pXT" secondAttribute="bottom" constant="8" symbolic="YES" id="WN0-z8-iZA"/>
+                <constraint firstItem="8Gh-Zd-F4l" firstAttribute="trailing" secondItem="NmF-jc-0qh" secondAttribute="trailing" id="apD-5c-kx8"/>
+                <constraint firstItem="BSM-3H-3DB" firstAttribute="top" secondItem="JcN-vR-Axn" secondAttribute="bottom" constant="4" id="bk9-Sr-ViE"/>
+                <constraint firstItem="hUb-TV-Hee" firstAttribute="leading" secondItem="70f-Cm-JE7" secondAttribute="leading" id="d7t-aJ-ONA"/>
+                <constraint firstItem="1g3-bb-pXT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="25" id="dO1-rH-Kca"/>
+                <constraint firstItem="CZ0-50-drV" firstAttribute="leading" secondItem="LPC-Um-IJW" secondAttribute="trailing" constant="15" id="m2M-Q0-BMh"/>
+                <constraint firstItem="noa-kG-q33" firstAttribute="bottom" secondItem="JcN-vR-Axn" secondAttribute="bottom" id="pO4-xE-HrD"/>
+                <constraint firstItem="hUb-TV-Hee" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottomMargin" id="sx2-XC-tMI"/>
+                <constraint firstItem="46L-mc-6XQ" firstAttribute="top" secondItem="LPC-Um-IJW" secondAttribute="bottom" constant="8" symbolic="YES" id="tpE-at-hdv"/>
+                <constraint firstItem="CZ0-50-drV" firstAttribute="leading" secondItem="noa-kG-q33" secondAttribute="leading" id="tw4-iM-Vnz"/>
+                <constraint firstItem="hUb-TV-Hee" firstAttribute="top" secondItem="70f-Cm-JE7" secondAttribute="bottom" constant="8" symbolic="YES" id="u8y-qH-0QC"/>
+                <constraint firstItem="CZ0-50-drV" firstAttribute="trailing" secondItem="46L-mc-6XQ" secondAttribute="trailing" id="uik-PV-Z76"/>
+                <constraint firstItem="Wl1-72-O4o" firstAttribute="top" secondItem="7m1-Ls-DJX" secondAttribute="bottom" constant="8" symbolic="YES" id="vMA-dE-3PG"/>
+                <constraint firstItem="Wl1-72-O4o" firstAttribute="leading" secondItem="vFz-pJ-aLs" secondAttribute="leading" id="x4e-jw-pfn"/>
+            </constraints>
+            <point key="canvasLocation" x="243" y="357"/>
+        </view>
+    </objects>
+</document>
