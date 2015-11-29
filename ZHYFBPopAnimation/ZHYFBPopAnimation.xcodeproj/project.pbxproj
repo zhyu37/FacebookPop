@@ -11,6 +11,9 @@
 		FB0050FD1C09A1CD00F995DC /* ZHYDecayAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0050FB1C09A1CD00F995DC /* ZHYDecayAnimationViewController.m */; };
 		FB0050FE1C09A1CD00F995DC /* ZHYDecayAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB0050FC1C09A1CD00F995DC /* ZHYDecayAnimationViewController.xib */; };
 		FB78CCBA1C0B0E80006C9807 /* ZHYAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB78CCB91C0B0E80006C9807 /* ZHYAnimationManager.m */; };
+		FB78CCBF1C0B1B16006C9807 /* ZHYBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB78CCBD1C0B1B16006C9807 /* ZHYBaseViewController.m */; };
+		FB78CCC41C0B200A006C9807 /* ZHYPropertyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB78CCC31C0B200A006C9807 /* ZHYPropertyViewController.m */; };
+		FB78CCC71C0B2977006C9807 /* ZHYEffectsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB78CCC61C0B2977006C9807 /* ZHYEffectsTableViewController.m */; };
 		FBF8564B1C06E66D00A043B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF8564A1C06E66D00A043B2 /* main.m */; };
 		FBF8564E1C06E66D00A043B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF8564D1C06E66D00A043B2 /* AppDelegate.m */; };
 		FBF856511C06E66D00A043B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF856501C06E66D00A043B2 /* ViewController.m */; };
@@ -49,6 +52,12 @@
 		FB0050FC1C09A1CD00F995DC /* ZHYDecayAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHYDecayAnimationViewController.xib; sourceTree = "<group>"; };
 		FB78CCB81C0B0E80006C9807 /* ZHYAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHYAnimationManager.h; sourceTree = "<group>"; };
 		FB78CCB91C0B0E80006C9807 /* ZHYAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHYAnimationManager.m; sourceTree = "<group>"; };
+		FB78CCBC1C0B1B16006C9807 /* ZHYBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHYBaseViewController.h; sourceTree = "<group>"; };
+		FB78CCBD1C0B1B16006C9807 /* ZHYBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHYBaseViewController.m; sourceTree = "<group>"; };
+		FB78CCC21C0B200A006C9807 /* ZHYPropertyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHYPropertyViewController.h; sourceTree = "<group>"; };
+		FB78CCC31C0B200A006C9807 /* ZHYPropertyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHYPropertyViewController.m; sourceTree = "<group>"; };
+		FB78CCC51C0B2977006C9807 /* ZHYEffectsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHYEffectsTableViewController.h; sourceTree = "<group>"; };
+		FB78CCC61C0B2977006C9807 /* ZHYEffectsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHYEffectsTableViewController.m; sourceTree = "<group>"; };
 		FBF856461C06E66C00A043B2 /* ZHYFBPopAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHYFBPopAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF8564A1C06E66D00A043B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FBF8564C1C06E66D00A043B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,6 +131,24 @@
 				FB0050FC1C09A1CD00F995DC /* ZHYDecayAnimationViewController.xib */,
 			);
 			name = Decay;
+			sourceTree = "<group>";
+		};
+		FB78CCBB1C0B18BC006C9807 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FB78CCBC1C0B1B16006C9807 /* ZHYBaseViewController.h */,
+				FB78CCBD1C0B1B16006C9807 /* ZHYBaseViewController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		FB78CCC11C0B1FCE006C9807 /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				FB78CCC21C0B200A006C9807 /* ZHYPropertyViewController.h */,
+				FB78CCC31C0B200A006C9807 /* ZHYPropertyViewController.m */,
+			);
+			name = Property;
 			sourceTree = "<group>";
 		};
 		FBF8563D1C06E66C00A043B2 = {
@@ -211,6 +238,10 @@
 				FBF856501C06E66D00A043B2 /* ViewController.m */,
 				FB78CCB81C0B0E80006C9807 /* ZHYAnimationManager.h */,
 				FB78CCB91C0B0E80006C9807 /* ZHYAnimationManager.m */,
+				FB78CCC51C0B2977006C9807 /* ZHYEffectsTableViewController.h */,
+				FB78CCC61C0B2977006C9807 /* ZHYEffectsTableViewController.m */,
+				FB78CCC11C0B1FCE006C9807 /* Property */,
+				FB78CCBB1C0B18BC006C9807 /* Base */,
 				FBF8567F1C06E83100A043B2 /* Spring */,
 				FB0050F91C09A0F400F995DC /* Decay */,
 			);
@@ -395,10 +426,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB78CCBF1C0B1B16006C9807 /* ZHYBaseViewController.m in Sources */,
+				FB78CCC71C0B2977006C9807 /* ZHYEffectsTableViewController.m in Sources */,
 				FBF856511C06E66D00A043B2 /* ViewController.m in Sources */,
 				FBF8564E1C06E66D00A043B2 /* AppDelegate.m in Sources */,
 				FBF856831C06E84700A043B2 /* ZHYSpringAnimationViewController.m in Sources */,
 				FB78CCBA1C0B0E80006C9807 /* ZHYAnimationManager.m in Sources */,
+				FB78CCC41C0B200A006C9807 /* ZHYPropertyViewController.m in Sources */,
 				FB0050FD1C09A1CD00F995DC /* ZHYDecayAnimationViewController.m in Sources */,
 				FBF8564B1C06E66D00A043B2 /* main.m in Sources */,
 			);

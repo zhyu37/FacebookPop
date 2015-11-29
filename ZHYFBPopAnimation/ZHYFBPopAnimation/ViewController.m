@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "ZHYSpringAnimationViewController.h"
 #import "ZHYDecayAnimationViewController.h"
+#import "ZHYBaseViewController.h"
+#import "ZHYPropertyViewController.h"
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -90,6 +92,8 @@
 {
      ZHYSpringAnimationViewController *springVC = [[ZHYSpringAnimationViewController alloc] init];
     ZHYDecayAnimationViewController *decayVC = [[ZHYDecayAnimationViewController alloc] init];
+    ZHYBaseViewController *base = [[ZHYBaseViewController alloc] init];
+    ZHYPropertyViewController *property = [[ZHYPropertyViewController alloc] init];
     
     if (indexPath.section == 0) {
         switch (indexPath.row) {
@@ -99,7 +103,12 @@
             case 1:
                 [self.navigationController pushViewController:decayVC animated:YES];
                 break;
-    
+            case 2:
+                [self.navigationController pushViewController:base animated:YES];
+                break;
+            case 3:
+                [self.navigationController pushViewController:property animated:YES];
+                break;
             default:
                 break;
         }

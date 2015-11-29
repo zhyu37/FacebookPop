@@ -6,6 +6,14 @@
 //  Copyright © 2015年 ZhYu. All rights reserved.
 //
 
+/**
+ *  弹簧动画是Bezier曲线无法表述的，PopSpringAnimation便是专门用来实现弹簧动画的。
+ *
+ *  @param nonatomic
+ *
+ *  @return 
+ */
+
 #import "ZHYSpringAnimationViewController.h"
 
 @interface ZHYSpringAnimationViewController ()<POPAnimationDelegate>

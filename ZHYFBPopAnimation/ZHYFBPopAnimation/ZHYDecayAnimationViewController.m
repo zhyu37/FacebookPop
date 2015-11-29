@@ -6,6 +6,14 @@
 //  Copyright © 2015年 ZhYu. All rights reserved.
 //
 
+/**
+ *  基于Bezier曲线无法描述Decay Aniamtion，用于衰减动画。
+ *
+ *  @param nonatomic
+ *
+ *  @return
+ */
+
 #import "ZHYDecayAnimationViewController.h"
 
 @interface ZHYDecayAnimationViewController ()
@@ -29,7 +37,15 @@
     
     //添加动画
     [self performAnimation];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"效果" style:UIBarButtonItemStyleDone target:self action:@selector(effectsClick)];
 }
+
+- (void)effectsClick
+{
+    
+}
+
 - (void)setupInit
 {
     //所有可选动画类型
