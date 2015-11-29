@@ -10,6 +10,7 @@
 		436043352353FD64418210CB /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8115E6618EFDF0DB66E8C702 /* libPods.a */; };
 		FB0050FD1C09A1CD00F995DC /* ZHYDecayAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB0050FB1C09A1CD00F995DC /* ZHYDecayAnimationViewController.m */; };
 		FB0050FE1C09A1CD00F995DC /* ZHYDecayAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB0050FC1C09A1CD00F995DC /* ZHYDecayAnimationViewController.xib */; };
+		FB78CCBA1C0B0E80006C9807 /* ZHYAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FB78CCB91C0B0E80006C9807 /* ZHYAnimationManager.m */; };
 		FBF8564B1C06E66D00A043B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF8564A1C06E66D00A043B2 /* main.m */; };
 		FBF8564E1C06E66D00A043B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF8564D1C06E66D00A043B2 /* AppDelegate.m */; };
 		FBF856511C06E66D00A043B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF856501C06E66D00A043B2 /* ViewController.m */; };
@@ -20,7 +21,6 @@
 		FBF8566F1C06E66D00A043B2 /* ZHYFBPopAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF8566E1C06E66D00A043B2 /* ZHYFBPopAnimationUITests.m */; };
 		FBF856831C06E84700A043B2 /* ZHYSpringAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF856811C06E84700A043B2 /* ZHYSpringAnimationViewController.m */; };
 		FBF856841C06E84700A043B2 /* ZHYSpringAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF856821C06E84700A043B2 /* ZHYSpringAnimationViewController.xib */; };
-		FBF856871C06EE5300A043B2 /* PDAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF856861C06EE5300A043B2 /* PDAnimationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +47,8 @@
 		FB0050FA1C09A1CD00F995DC /* ZHYDecayAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHYDecayAnimationViewController.h; sourceTree = "<group>"; };
 		FB0050FB1C09A1CD00F995DC /* ZHYDecayAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHYDecayAnimationViewController.m; sourceTree = "<group>"; };
 		FB0050FC1C09A1CD00F995DC /* ZHYDecayAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHYDecayAnimationViewController.xib; sourceTree = "<group>"; };
+		FB78CCB81C0B0E80006C9807 /* ZHYAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHYAnimationManager.h; sourceTree = "<group>"; };
+		FB78CCB91C0B0E80006C9807 /* ZHYAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHYAnimationManager.m; sourceTree = "<group>"; };
 		FBF856461C06E66C00A043B2 /* ZHYFBPopAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHYFBPopAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBF8564A1C06E66D00A043B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FBF8564C1C06E66D00A043B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,8 +68,6 @@
 		FBF856801C06E84700A043B2 /* ZHYSpringAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHYSpringAnimationViewController.h; sourceTree = "<group>"; };
 		FBF856811C06E84700A043B2 /* ZHYSpringAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHYSpringAnimationViewController.m; sourceTree = "<group>"; };
 		FBF856821C06E84700A043B2 /* ZHYSpringAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHYSpringAnimationViewController.xib; sourceTree = "<group>"; };
-		FBF856851C06EE5300A043B2 /* PDAnimationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDAnimationManager.h; sourceTree = "<group>"; };
-		FBF856861C06EE5300A043B2 /* PDAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDAnimationManager.m; sourceTree = "<group>"; };
 		FBF856881C06F51800A043B2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,8 +209,8 @@
 			children = (
 				FBF8564F1C06E66D00A043B2 /* ViewController.h */,
 				FBF856501C06E66D00A043B2 /* ViewController.m */,
-				FBF856851C06EE5300A043B2 /* PDAnimationManager.h */,
-				FBF856861C06EE5300A043B2 /* PDAnimationManager.m */,
+				FB78CCB81C0B0E80006C9807 /* ZHYAnimationManager.h */,
+				FB78CCB91C0B0E80006C9807 /* ZHYAnimationManager.m */,
 				FBF8567F1C06E83100A043B2 /* Spring */,
 				FB0050F91C09A0F400F995DC /* Decay */,
 			);
@@ -398,7 +398,7 @@
 				FBF856511C06E66D00A043B2 /* ViewController.m in Sources */,
 				FBF8564E1C06E66D00A043B2 /* AppDelegate.m in Sources */,
 				FBF856831C06E84700A043B2 /* ZHYSpringAnimationViewController.m in Sources */,
-				FBF856871C06EE5300A043B2 /* PDAnimationManager.m in Sources */,
+				FB78CCBA1C0B0E80006C9807 /* ZHYAnimationManager.m in Sources */,
 				FB0050FD1C09A1CD00F995DC /* ZHYDecayAnimationViewController.m in Sources */,
 				FBF8564B1C06E66D00A043B2 /* main.m in Sources */,
 			);
@@ -540,7 +540,7 @@
 			baseConfigurationReference = E6927A6227929401972021D1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/zhanghaoyu/Documents/xcode/ZHYFBPopAnimation/ZHYFBPopAnimation/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/zhanghaoyu/Desktop/github/ZHYFacebookPop/ZHYFBPopAnimation/ZHYFBPopAnimation/PrefixHeader.pch;
 				INFOPLIST_FILE = ZHYFBPopAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zhyu37.ZHYFBPopAnimation;
@@ -553,7 +553,7 @@
 			baseConfigurationReference = 72D2AB169C48B3A71E8895DB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = /Users/zhanghaoyu/Documents/xcode/ZHYFBPopAnimation/ZHYFBPopAnimation/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/zhanghaoyu/Desktop/github/ZHYFacebookPop/ZHYFBPopAnimation/ZHYFBPopAnimation/PrefixHeader.pch;
 				INFOPLIST_FILE = ZHYFBPopAnimation/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Zhyu37.ZHYFBPopAnimation;

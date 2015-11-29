@@ -73,7 +73,7 @@
     [self.popView pop_removeAllAnimations];
     POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:self.animationType];
     
-    [PDAnimationManager springObject:self.popView configAnimation:anim WithType:self.animationType andAnimated:self.animated];
+    [ZHYAnimationManager springObject:self.popView configAnimation:anim WithType:self.animationType andAnimated:self.animated];
     
     self.animated = !self.animated;
     anim.springBounciness = bounciness;

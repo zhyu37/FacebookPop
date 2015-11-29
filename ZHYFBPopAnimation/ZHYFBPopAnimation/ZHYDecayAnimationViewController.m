@@ -47,60 +47,26 @@
     [self setupAnimationView];
     
     [self.view addSubview:self.animationImage];
-    [self hideTableView];
-    
     
 }
 
 - (void)setupAnimationView
 {
     [self.animationImage.layer pop_removeAllAnimations];
-    self.animationImage.layer.opacity = 1.0;
-    self.animationImage.layer.transform = CATransform3DIdentity;
-    [self.animationImage.layer setMasksToBounds:YES];
-    [self.animationImage.layer setBackgroundColor:[UIColor colorWithRed:0.16 green:0.72 blue:1.0 alpha:1.0].CGColor];
-    [self.animationImage.layer setCornerRadius:25.0f];
-    [self.animationImage setBounds:CGRectMake(0.0f, 0.0f, 50.0f, 50.0f)];
-    self.animationImage.layer.position = CGPointMake(self.view.center.x, 180.0);
+    //
+    self.animationImage.layer.position = CGPointMake(0, 180);
     self.animated = NO;
-    
-    
-    
-    
-//    self.popView = [CALayer layer];
-//    //清除 跟新数据之后之前的图像
-//    [self.animationImage removeFromSuperview];
-//    
-//    
-//    self.popView = self.animationImage.layer;
-//    [self.view.layer addSublayer:self.popView];
-//    self.animated = NO;
 
-}
-
--(void)hideTableView
-{
-    POPSpringAnimation *anim = [POPSpringAnimation animationWithPropertyNamed:kPOPViewCenter];
-    anim.toValue = [NSValue valueWithCGPoint:CGPointMake(self.view.window.center.x, -1000.0)];
-    [self.animationImage pop_addAnimation:anim forKey:@"AnimationHide"];
-    
-    anim.completionBlock = ^(POPAnimation *anim, BOOL finished) {
-        if (finished) {
-            [self setupAnimationView];
-            [self performAnimation];
-        }
-    };
 }
 
 -(void)performAnimation
 {
-//    [self hideTableView];
     
     [self.animationImage.layer pop_removeAllAnimations];
     
     POPDecayAnimation *anim = [POPDecayAnimation animationWithPropertyNamed:self.animationType];
     
-    [PDAnimationManager decayObject:self.animationImage.layer configAnimation:anim WithType:self.animationType andAnimated:self.animated andVelocitySlider:self.VelocitySlider];
+    [ZHYAnimationManager decayObject:self.animationImage.layer configAnimation:anim WithType:self.animationType andAnimated:self.animated andVelocitySlider:self.VelocitySlider];
     
     
     anim.deceleration = self.DeclerationSlider.value;

@@ -1,14 +1,14 @@
 //
-//  PDAnimationManager.m
-//  PopDemos
+//  ZHYAnimationManager.m
+//  ZHYFBPopAnimation
 //
-//  Created by kevinzhow on 14-5-16.
-//  Copyright (c) 2014年 Piner. All rights reserved.
+//  Created by 张昊煜 on 15/11/29.
+//  Copyright © 2015年 ZhYu. All rights reserved.
 //
 
-#import "PDAnimationManager.h"
+#import "ZHYAnimationManager.h"
 
-@implementation PDAnimationManager
+@implementation ZHYAnimationManager
 
 +(void)springObject:(CALayer*)layer configAnimation:(POPPropertyAnimation *)animation WithType:(NSString *)type andAnimated:(BOOL)animated
 {
@@ -57,7 +57,7 @@
         }
     }else if ([type isEqualToString:kPOPLayerSize])
     {
-
+        
         if (animated) {
             animation.toValue = [NSValue valueWithCGSize:CGSizeMake(50.0, 100.0)];
         }else{
@@ -91,7 +91,7 @@
 
 +(void)decayObject:(CALayer*)layer configAnimation:(POPDecayAnimation *)animation WithType:(NSString *)type andAnimated:(BOOL)animated andVelocitySlider:(UISlider *)slider;
 {
-
+    
     //For scale
     if ([type isEqualToString:kPOPLayerScaleXY]) {
         if (animated) {
@@ -101,7 +101,7 @@
             animation.fromValue = [NSValue valueWithCGSize:CGSizeMake(0.5, 0.5)];
         }
         
-            
+        
     }else if ([type isEqualToString:kPOPLayerBackgroundColor])
     {
         if (animated) {
@@ -131,7 +131,7 @@
             animation.fromValue = @0.0;
         }
         
-
+        
     }else if ([type isEqualToString:kPOPLayerPosition])
     {
         if (animated) {
@@ -142,7 +142,7 @@
             animation.fromValue = [NSValue valueWithCGPoint:CGPointMake(160, 150)];
         }
         
-
+        
     }else if ([type isEqualToString:kPOPLayerPositionX])
     {
         if (animated) {
@@ -165,7 +165,7 @@
         
     }else if ([type isEqualToString:kPOPLayerSize])
     {
-       
+        
         
         if (animated) {
             animation.velocity =  [NSValue valueWithCGSize:CGSizeMake(-slider.value/10.0, -slider.value*3)];
@@ -204,5 +204,6 @@
     }
     
 }
+
 
 @end

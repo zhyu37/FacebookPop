@@ -1,18 +1,19 @@
 //
-//  PDAnimationManager.h
-//  PopDemos
+//  ZHYAnimationManager.h
+//  ZHYFBPopAnimation
 //
-//  Created by kevinzhow on 14-5-16.
-//  Copyright (c) 2014年 Piner. All rights reserved.
+//  Created by 张昊煜 on 15/11/29.
+//  Copyright © 2015年 ZhYu. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <POP/POP.h>
 
-@interface PDAnimationManager : NSObject
+@interface ZHYAnimationManager : NSObject
 
 +(void)springObject:(CALayer*)layer configAnimation:(POPPropertyAnimation *)animation WithType:(NSString *)type andAnimated:(BOOL)animated;
 
 +(void)decayObject:(CALayer*)layer configAnimation:(POPDecayAnimation *)animation WithType:(NSString *)type andAnimated:(BOOL)animated andVelocitySlider:(UISlider *)slider;
+
 
 @end
