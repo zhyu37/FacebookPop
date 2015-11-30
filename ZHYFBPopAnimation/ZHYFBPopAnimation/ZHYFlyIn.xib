@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZHYFlyIn">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZ8-wO-b8H">
+                    <rect key="frame" x="8" y="505" width="304" height="37"/>
+                    <color key="backgroundColor" red="1" green="0.72669939114219617" blue="0.16222890847947635" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="ecM-sh-2Uj"/>
+                    </constraints>
+                    <state key="normal" title="animation"/>
+                    <connections>
+                        <action selector="animationClick:" destination="-1" eventType="touchUpInside" id="4lg-uN-vat"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rZ8-wO-b8H" secondAttribute="bottom" constant="26" id="AN4-8q-djt"/>
+                <constraint firstItem="rZ8-wO-b8H" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="QxK-hk-0zO"/>
+                <constraint firstItem="rZ8-wO-b8H" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="fpj-dc-CBq"/>
+            </constraints>
+            <point key="canvasLocation" x="258" y="342"/>
+        </view>
+    </objects>
+</document>

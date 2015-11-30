@@ -15,7 +15,10 @@
  */
 
 #import "ZHYDecayAnimationViewController.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "ZHYAnimationManager.h"
+#import <POP/POP.h>
 
 @interface ZHYDecayAnimationViewController ()<UITableViewDelegate, UITableViewDataSource>
 

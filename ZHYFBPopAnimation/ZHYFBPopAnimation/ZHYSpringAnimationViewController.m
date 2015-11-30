@@ -15,7 +15,10 @@
  */
 
 #import "ZHYSpringAnimationViewController.h"
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 #import "ZHYAnimationManager.h"
+#import <POP/POP.h>
 
 @interface ZHYSpringAnimationViewController ()<UITableViewDataSource, UITableViewDelegate>
 

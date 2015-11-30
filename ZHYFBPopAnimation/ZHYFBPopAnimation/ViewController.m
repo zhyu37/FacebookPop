@@ -12,6 +12,8 @@
 #import "ZHYBaseViewController.h"
 #import "ZHYPropertyViewController.h"
 
+#import "ZHYFlyIn.h"
+
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -22,10 +24,17 @@
 
 @implementation ViewController
 
+/**
+ *  Pop Animation应用于CALayer时，在动画运行的任何时刻，layer和其presentationLayer的相关属性值始终保持一致，而Core Animation做不到。
+    Pop Animation可以应用任何NSObject的对象，而Core Aniamtion必须是CALayer。
+ */
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.navigationItem.title = @"PopAnimation";
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupDate];
     
@@ -35,7 +44,7 @@
 - (void)setupDate
 {
     [self.animationDict setObject:[[NSArray alloc] initWithObjects:@"Spring Animation", @"Decay Animation", @"Basic Animation", @"Property Animation", nil] forKey:@"Animation"];
-    [self.animationDict setObject:[[NSArray alloc] initWithObjects:@"Popup & Decay Move", @"Fly In", @"Transform", nil] forKey:@"Usage"];
+    [self.animationDict setObject:[[NSArray alloc] initWithObjects:@"Fly In", nil] forKey:@"Usage"];
     
     [self.array addObject:@"Animation"];
     [self.array addObject:@"Usage"];
@@ -95,6 +104,8 @@
     ZHYBaseViewController *base = [[ZHYBaseViewController alloc] init];
     ZHYPropertyViewController *property = [[ZHYPropertyViewController alloc] init];
     
+    ZHYFlyIn *flyIn = [[ZHYFlyIn alloc] init];
+    
     if (indexPath.section == 0) {
         switch (indexPath.row) {
             case 0:
@@ -113,7 +124,13 @@
                 break;
         }
     } else {
-        
+        switch (indexPath.row) {
+            case 0:
+                [self.navigationController pushViewController:flyIn animated:YES];
+                break;
+            default:
+                break;
+        }
     }
     
 }

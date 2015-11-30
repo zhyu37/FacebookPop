@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <POP/POP.h>
 #import <UIKit/UIKit.h>
-#import "ZHYAnimationManager.h"
+#import <POP/POP.h>
 
 @interface ZHYAnimationManager : NSObject
 

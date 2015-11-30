@@ -23,6 +23,8 @@
 		FBF8566F1C06E66D00A043B2 /* ZHYFBPopAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF8566E1C06E66D00A043B2 /* ZHYFBPopAnimationUITests.m */; };
 		FBF856831C06E84700A043B2 /* ZHYSpringAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF856811C06E84700A043B2 /* ZHYSpringAnimationViewController.m */; };
 		FBF856841C06E84700A043B2 /* ZHYSpringAnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBF856821C06E84700A043B2 /* ZHYSpringAnimationViewController.xib */; };
+		FBFC5CD01C0C0941007F6469 /* ZHYFlyIn.m in Sources */ = {isa = PBXBuildFile; fileRef = FBFC5CCE1C0C0941007F6469 /* ZHYFlyIn.m */; };
+		FBFC5CD11C0C0941007F6469 /* ZHYFlyIn.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBFC5CCF1C0C0941007F6469 /* ZHYFlyIn.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,9 @@
 		FBF856811C06E84700A043B2 /* ZHYSpringAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHYSpringAnimationViewController.m; sourceTree = "<group>"; };
 		FBF856821C06E84700A043B2 /* ZHYSpringAnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHYSpringAnimationViewController.xib; sourceTree = "<group>"; };
 		FBF856881C06F51800A043B2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FBFC5CCD1C0C0941007F6469 /* ZHYFlyIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZHYFlyIn.h; sourceTree = "<group>"; };
+		FBFC5CCE1C0C0941007F6469 /* ZHYFlyIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZHYFlyIn.m; sourceTree = "<group>"; };
+		FBFC5CCF1C0C0941007F6469 /* ZHYFlyIn.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZHYFlyIn.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,10 +240,8 @@
 				FBF856501C06E66D00A043B2 /* ViewController.m */,
 				FB78CCB81C0B0E80006C9807 /* ZHYAnimationManager.h */,
 				FB78CCB91C0B0E80006C9807 /* ZHYAnimationManager.m */,
-				FB78CCC11C0B1FCE006C9807 /* Property */,
-				FB78CCBB1C0B18BC006C9807 /* Base */,
-				FBF8567F1C06E83100A043B2 /* Spring */,
-				FB0050F91C09A0F400F995DC /* Decay */,
+				FBFC5CC11C0BE4BE007F6469 /* Animation */,
+				FBFC5CC21C0BE4C7007F6469 /* Usage */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -251,6 +254,27 @@
 				FBF856821C06E84700A043B2 /* ZHYSpringAnimationViewController.xib */,
 			);
 			name = Spring;
+			sourceTree = "<group>";
+		};
+		FBFC5CC11C0BE4BE007F6469 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				FB78CCC11C0B1FCE006C9807 /* Property */,
+				FB78CCBB1C0B18BC006C9807 /* Base */,
+				FBF8567F1C06E83100A043B2 /* Spring */,
+				FB0050F91C09A0F400F995DC /* Decay */,
+			);
+			name = Animation;
+			sourceTree = "<group>";
+		};
+		FBFC5CC21C0BE4C7007F6469 /* Usage */ = {
+			isa = PBXGroup;
+			children = (
+				FBFC5CCD1C0C0941007F6469 /* ZHYFlyIn.h */,
+				FBFC5CCE1C0C0941007F6469 /* ZHYFlyIn.m */,
+				FBFC5CCF1C0C0941007F6469 /* ZHYFlyIn.xib */,
+			);
+			name = Usage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBFC5CD11C0C0941007F6469 /* ZHYFlyIn.xib in Resources */,
 				FBF856591C06E66D00A043B2 /* LaunchScreen.storyboard in Resources */,
 				FBF856561C06E66D00A043B2 /* Assets.xcassets in Resources */,
 				FBF856841C06E84700A043B2 /* ZHYSpringAnimationViewController.xib in Resources */,
@@ -421,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBFC5CD01C0C0941007F6469 /* ZHYFlyIn.m in Sources */,
 				FB78CCBF1C0B1B16006C9807 /* ZHYBaseViewController.m in Sources */,
 				FBF856511C06E66D00A043B2 /* ViewController.m in Sources */,
 				FBF8564E1C06E66D00A043B2 /* AppDelegate.m in Sources */,
