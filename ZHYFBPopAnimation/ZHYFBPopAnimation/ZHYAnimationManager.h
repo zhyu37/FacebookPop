@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <POP/POP.h>
+#import <UIKit/UIKit.h>
+#import "ZHYAnimationManager.h"
 
 @interface ZHYAnimationManager : NSObject
 
